@@ -110,6 +110,8 @@ def outwin():
 
     bt = Button(win3, text='写入', command=outedit)
     bt.grid(row=5, column=1, sticky=W + S + E + N, columnspan=2)
+    # 回车也可以使此按钮生效
+    win3.bind('<Return>', lambda event: outedit())
 
     bt_q = Button(win3, text='返回', command=_quit)
     bt_q.grid(row=5, column=3, sticky=W + S + E + N)
